@@ -1,23 +1,30 @@
-# Lista-de-Itens
+# Lista de Itens
 
-Por mais simples que seja o código eu via alguns desenvolvedores fazendo esse projeto pequeno, eu nunca tinha feito algo parecido, então me desafiei a 
-tentar desenvolver um projeto desses também, aonde se consiste em adicionar um item a lista e conseguir limpá-la depois.
+Este é um projeto simples de lista de itens, onde você pode adicionar e limpar itens da lista. Mesmo que o código seja bastante simples, é um excelente exercício para praticar o uso de eventos e manipulação do DOM em JavaScript.
 
-#Lógica
+## Funcionalidades
 
-Foi adicionado um elemento input e um botão, aonde foi colocado um evento para que a cada clique no botão ele iria adicionar um elemento li em outra div com elemento ul,
-o valor que sera adicionar no li sera o do input que o usuário poderá escrever. <br>
-Cada elemento principal (input, button e ul) recebeu um id para poder ser chamado no JavaScript e montar a lógica 
-de pegar o valor do input ao clique do botão e a adicionar um li ao elemento ul.
+- **Adição de Itens:** Um campo de entrada (input) e um botão permitem que você adicione itens à lista. Ao clicar no botão, o valor digitado no campo de entrada é adicionado como um novo item na lista.
 
-#Elementos capturador pelo querySelector/#id
+- **Limpeza da Lista:** Existe um botão dedicado para limpar toda a lista, oferecendo uma maneira rápida de reiniciar o histórico de itens.
 
-const texto = document.querySelector("#texto");<br>
-const botao = document.querySelector("#botao");<br>
-const lista = document.querySelector("#lista");<br>
-const botaoLimpar = document.querySelector("#botaoLimpar")<br>
+## Lógica do Projeto
 
-Com  esses elementos capturador foram adicionados evento ao botão de adicionar (botao) e o botão de limpar (botaoLimpar), para adicionar
-um elemento a cada click o pegamos a var lista.innerHTML e atribuímos o valor do input, porem com um adicionar 
-de elemento li com classe -> < li class=list-group-item > .... < / li >, e o mesmo se aplica para o botão de limpar, nele temos somente ao clicar
-limpar todo histórico do ul e do input.
+Foi implementado um campo de entrada e um botão, com um evento de clique no botão para adicionar um item à lista e outro botão para limpar a lista.
+
+### Elementos Capturados por `querySelector` e `#id`
+
+```javascript
+const texto = document.querySelector("#texto");
+const botao = document.querySelector("#botao");
+const lista = document.querySelector("#lista");
+const botaoLimpar = document.querySelector("#botaoLimpar");
+```
+
+### Adição de Itens
+
+Ao clicar no botão, o valor do campo de entrada é capturado e adicionado como um novo item à lista utilizando a estrutura de um elemento `li`.
+
+### Limpeza da Lista
+
+O botão de limpar (`botaoLimpar`) possui um evento que limpa todo o histórico da lista e do campo de entrada.
